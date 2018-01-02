@@ -1,0 +1,48 @@
+.contact {
+    padding: 20vw 1.25rem;
+    
+     @mixin atSmall {
+            padding: 20vw 2.5rem;
+
+        }
+        
+        @mixin atLarge {
+            padding: 80px;
+        }
+
+
+    &--logo {
+        img {
+            display: block;
+            padding-top: 100px;
+            width: calc(100% - 10px);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    &--social {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        border-top: 1px rgb(236, 238, 239) solid;
+
+        &--icons {
+
+
+
+            font-size: 1.25rem;
+            display: inline;
+
+            text-align: center;
+
+            i {
+                width: 20%;
+                margin-top: 30px;
+            }
+
+        }
+    }
+
+
+}

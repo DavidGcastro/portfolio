@@ -1,0 +1,57 @@
+.mainHeader {
+
+    .underline {
+        padding-bottom: 1.5px;
+        border-bottom: 1px white solid;
+        cursor: pointer;
+    }
+
+
+
+    &--content {
+        background-color: #0d0d0d;
+        min-height: 100vh;
+        padding: 35vw 1.25rem;
+
+
+
+        @mixin atSmall {
+            padding: 20vw 2.5rem;
+
+        }
+        
+        @mixin atLarge {
+            padding: 10vw 8rem;
+        }
+
+
+        &--small {
+            color: #aaa;
+            margin: 0;
+            letter-spacing: .125rem;
+            text-transform: uppercase;
+            font-size: .75rem;
+
+        }
+
+        h1 {
+            color: white;
+            font-weight: 500;
+            line-height: 1.5;
+            font-size: 1.85rem;
+
+            @mixin atSmall {
+                font-size: 2.25rem;
+            }
+
+            @mixin atMedium {
+                font-size: 3rem;
+            }
+            @mixin atLarge{
+                font-size: 4rem;
+            }
+        }
+
+    }
+
+}
