@@ -7,16 +7,15 @@
         }
         
         @mixin atLarge {
-            padding: 80px;
+             padding: 20vw 7.5vh;
         }
 
 
     &--logo {
         img {
             display: block;
-            padding-top: 100px;
-            width: calc(100% - 10px);
-            max-width: 500px;
+            width: calc(50% - 10px);
+            max-width: 200px;
             margin: 0 auto;
         }
     }
@@ -37,10 +36,16 @@
             text-align: center;
 
             i {
+                
                 width: 20%;
                 margin-top: 30px;
+                
+                &:hover{
+                    color: #aaa;
+                }
             }
 
+            
         }
     }
 
