@@ -42,15 +42,20 @@
     }
 
     &--content {
+        height: 100vh;
         &--left {
+            display: inline-block;
             font-size: 2.25rem;
             height: 100%;
             line-height: 1.33;
 
             @mixin atLarge {
+                position: relative;
                 float: left;
                 width: 50%;
-                margin: 0;
+                top: calc(height/2);
+               
+          
 
             }
 
@@ -155,11 +160,17 @@
 
 
             #picofme {
+
+
+                @mixin atSmall {
+                    width: 100%;
+                }
+
                 display: block;
                 padding-top: 100px;
                 width: calc(100% - 10px);
                 height: auto;
-                max-width: 500px;
+                max-width: 600px;
                 margin: 0 auto;
 
 

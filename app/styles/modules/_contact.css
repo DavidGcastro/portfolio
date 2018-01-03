@@ -1,14 +1,29 @@
 .contact {
-    padding: 20vw 1.25rem;
-    
-     @mixin atSmall {
-            padding: 20vw 2.5rem;
+    min-height: 100vh;
+    position: relative;
+    height: 100%;
 
-        }
-        
-        @mixin atLarge {
-            padding: 13vw 7.5vh; 
-        }
+
+    &--content {
+        width: 50%;
+        height: 50%;
+        overflow: auto;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+
+    @mixin atSmall {
+        /*            padding: 20vw 2.5rem;*/
+    }
+
+    @mixin atLarge {
+        /*            padding: 13vw 7.5vh; */
+    }
 
 
     &--logo {
@@ -38,13 +53,13 @@
             i {
                 width: 20%;
                 margin-top: 30px;
-                
-                &:hover{
+
+                &:hover {
                     color: #aaa;
                 }
             }
 
-            
+
         }
     }
 
