@@ -162,7 +162,7 @@
 
 
             #picofme {
-
+                padding-top: 30px;
 
                 @mixin atSmall {
                     width: 100%;
