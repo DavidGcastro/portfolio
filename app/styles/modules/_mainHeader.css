@@ -1,7 +1,5 @@
 .mainHeader {
-/*    min-height: 100vh;*/
-
-   
+/*        min-height: 100vh;*/
     .underline {
         padding-bottom: 1.5px;
         border-bottom: 1px white solid;
@@ -12,8 +10,12 @@
 
     &--content {
         background-color: #0d0d0d;
-        min-height: 100vh;
+        min-height:70vh;
         padding: 35vw 1.25rem;
+        
+        @mixin atLarge{
+            min-height: 80vh;
+        }
 
 
 
@@ -21,7 +23,7 @@
             padding: 20vw 2.5rem;
 
         }
-        
+
         @mixin atLarge {
             padding: 10vw 8rem;
         }
@@ -32,7 +34,7 @@
             margin: 0;
             letter-spacing: .125rem;
             text-transform: uppercase;
-            font-size: .75rem;
+            font-size: 1rem;
 
         }
 
@@ -49,11 +51,69 @@
             @mixin atMedium {
                 font-size: 3rem;
             }
-            @mixin atLarge{
+            @mixin atLarge {
                 font-size: 5.5vw;
             }
         }
 
     }
 
+}
+
+
+
+/* Arrow Button 
+	-----------------------------------*/
+
+.container-arrow {
+   
+    margin-top: -20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding-bottom: 15px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.container-arrow:hover,
+.container-arrow:focus {
+    text-decoration: none;
+}
+
+/* Arrow Bouncing */
+
+.container-arrow span {
+    display: inline-block;
+    font-size: 80px;
+    animation: .7s down infinite alternate;
+    -webkit-animation: .7s down infinite alternate;
+}
+
+/***Animation Arrow down***/
+
+@keyframes down {
+    0% {
+        transform: translateY(0px)
+    }
+    100% {
+        transform: translateY(20px)
+    }
+}
+
+@-webkit-keyframes down {
+    0% {
+        -webkit-transform: translateY(0px)
+    }
+    100% {
+        -webkit-transform: translateY(20px)
+    }
 }

@@ -1,5 +1,5 @@
 .twoCol {
-
+/*    min-height: 100vh;*/
 
     border-bottom: 1px rgb(236, 238, 239) solid;
     padding: 22vw 1.25rem;
@@ -42,20 +42,21 @@
     }
 
     &--content {
-        height: 100vh;
+/*        min-height: 100vh;*/
         &--left {
             display: inline-block;
             font-size: 2.25rem;
-            height: 100%;
+
             line-height: 1.33;
 
             @mixin atLarge {
                 position: relative;
                 float: left;
+                height: 100%;
                 width: 50%;
-                top: calc(height/2);
-               
-          
+
+
+
 
             }
 
@@ -164,10 +165,12 @@
 
                 @mixin atSmall {
                     width: 100%;
+                    margin-top: 50px;
+                   
                 }
 
                 display: block;
-                padding-top: 100px;
+
                 width: calc(100% - 10px);
                 height: auto;
                 max-width: 600px;
@@ -176,6 +179,8 @@
 
                 @mixin atLarge {
                     margin: 0;
+                    padding-top: 100px;
+
 
                 }
 
