@@ -1,6 +1,5 @@
 .twoCol {
-/*    min-height: 100vh;*/
-
+    /*    min-height: 100vh;*/
     border-bottom: 1px rgb(236, 238, 239) solid;
     padding: 22vw 1.25rem;
 
@@ -42,7 +41,7 @@
     }
 
     &--content {
-/*        min-height: 100vh;*/
+        /*        min-height: 100vh;*/
         &--left {
             display: inline-block;
             font-size: 2.25rem;
@@ -54,6 +53,8 @@
                 float: left;
                 height: 100%;
                 width: 50%;
+                font-size: 20rem;
+                transform: rotate(-7deg);
 
 
 
@@ -166,7 +167,7 @@
                 @mixin atSmall {
                     width: 100%;
                     margin-top: 50px;
-                   
+
                 }
 
                 display: block;

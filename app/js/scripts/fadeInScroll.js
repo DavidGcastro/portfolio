@@ -6,18 +6,14 @@ $(document).ready(function () {
         // Basically, we go through each element and check its relative position within the viewport
         $('.fadeMe').each(function () {
 
-            //var position = $('.twoCol').offset().top;
 
             var scrollTop = $(window).scrollTop();
             var pos = $(this).offset().top - $w.scrollTop();
             // Get viewport height
             var vh = $w.height();
-//            console.log(vh)
-//            console.log(pos)
+
             if (pos < vh) {
                 // If element has past the starting threshold, we fade it
-
-      
                 $(this).css('opacity', pos / vh);
 
             }
