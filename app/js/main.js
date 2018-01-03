@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".header1");$(document).on("scroll",function(){var o=$(window);$(".fadeMe").each(function(){var t=$(this).offset().top-o.scrollTop(),c=o.height();t<c?$(this).css("opacity",t/c):$(this).css("opacity",1)})})});

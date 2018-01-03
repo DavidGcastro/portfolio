@@ -7,7 +7,7 @@
         }
         
         @mixin atLarge {
-             padding: 20vw 7.5vh;
+            padding: 13vw 7.5vh; 
         }
 
 
@@ -36,7 +36,6 @@
             text-align: center;
 
             i {
-                
                 width: 20%;
                 margin-top: 30px;
                 
