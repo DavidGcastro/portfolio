@@ -90,7 +90,7 @@
 
                 &--logo {
                     margin-right: 20px;
-                    max-width: 90px;
+                    max-width: 80px;
 
                     @mixin atMedium {
                         margin-right: 51px;
