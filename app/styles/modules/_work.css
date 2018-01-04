@@ -1,0 +1,106 @@
+.work {
+
+
+    &--link {
+        color: black;
+        text-decoration: none;
+
+        @mixin atLarge {
+            display: inline-block;
+
+        }
+
+
+
+        &:hover {
+            .work--url {
+                opacity: 1;
+            }
+        }
+    }
+
+
+
+
+    @mixin atMedium {
+        margin: 30px 0;
+    }
+
+
+    @mixin atLarge {
+        margin: 0 0;
+
+
+
+    }
+
+
+    &--name {
+        font-size: 1.25rem;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    &--role {
+        font-size: 12px;
+        margin-bottom: 0px;
+        color: #aaa;
+
+
+        @mixin atMedium {
+            margin: 0px;
+        }
+
+        @mixin atLarge {
+            margin: 0px;
+        }
+
+    }
+
+    &--url {
+        font-size: 10px;
+        margin: 0;
+        color: #aaa;
+        display: block;
+        font-weight: 300;
+
+        @mixin atMedium {
+            margin-left: 5px;
+            display: inline-block;
+            color: black;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        @mixin atLarge {
+            opacity: 0;
+            transition: opacity .4s linear;
+
+        }
+    }
+
+    &--awards {
+        color: #aaa;
+        margin-top: 80px;
+        margin-bottom: 24px;
+
+
+        &--title {
+            font-size: 14px;
+            letter-spacing: .5px;
+            margin-bottom: 30px;
+        }
+
+
+        &--logo {
+
+            width: 90px;
+            margin-right: 22px;
+        }
+
+    }
+
+
+
+
+}

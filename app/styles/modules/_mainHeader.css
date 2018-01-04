@@ -1,5 +1,5 @@
 .mainHeader {
-/*        min-height: 100vh;*/
+    /*        min-height: 100vh;*/
     .underline {
         padding-bottom: 1.5px;
         border-bottom: 1px white solid;
@@ -10,10 +10,12 @@
 
     &--content {
         background-color: #232323;
-        min-height:70vh;
+        min-height: 70vh;
         padding: 35vw 1.25rem;
-        
-        @mixin atLarge{
+
+        font-family: 'Poppins', sans-serif;
+
+        @mixin atLarge {
             min-height: 80vh;
         }
 
@@ -30,8 +32,9 @@
 
 
         &--small {
-        
-            color: #aaa;
+
+/*            color: #aaa;*/
+            color: #ffda00;
             margin: 0;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -66,7 +69,7 @@
 	-----------------------------------*/
 
 .container-arrow {
-   
+
     margin-top: -20px;
     font-weight: bold;
     text-transform: uppercase;

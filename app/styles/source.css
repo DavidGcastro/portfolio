@@ -2,4 +2,5 @@
 @import "/modules/_globals";
 @import "/modules/_mainHeader";
 @import "modules/_twoCol";
-@import "modules/_contact"
+@import "modules/_contact";
+@import "modules/_work";

@@ -1,32 +1,6 @@
 .twoCol {
-    /*    min-height: 100vh;*/
-    /*    background-color: #FFE9E1;*/
     background-color: rgb(253, 238, 233);
-
-    /*    border-bottom: 10px rgb(236, 238, 239) solid;*/
     padding: 22vw 1.25rem;
-
-    i {
-        margin: 5px;
-    }
-
-    .work-title {
-        margin-bottom: 5px;
-        
-        display: inline-block;
-    }
-
-    #link-icon {
-        color: #aaa;
-        display: block;
-
-        @mixin atMedium {
-            display: none;
-            color: black;
-            padding-left: 5px;
-        }
-
-    }
 
 
     @mixin atMedium {
@@ -45,20 +19,19 @@
         clear: both;
     }
 
+
+    /*    ALL CONTENT*/
     &--content {
-
-
         @mixin atMedium {
             margin: 0 auto;
         }
 
-
+        /*        LEFT SIDE*/
         &--left {
 
-
+            font-family: 'Poppins', sans-serif;
             display: inline-block;
             font-size: 2.25rem;
-
             line-height: 1.33;
 
             @mixin atMedium {
@@ -74,95 +47,35 @@
                 height: 100%;
                 width: 50%;
                 font-size: 14rem;
-                /*                transform: rotate(7deg);*/
             }
+
 
         }
+
+
+        /*        RIGHT SIDE*/
         &--right {
 
-
-
-
-            &--awards {
-
-                display: inline-block;
-
-
-                &--logo {
-                    margin-right: 20px;
-                    max-width: 80px;
-
-                    @mixin atMedium {
-                        margin-right: 51px;
-
-                    }
-
-                    @mixin atLarge {
-                        margin-right: 80px;
-                    }
-
-                }
-
-
+            @mixin atLarge {
+                float: right;
+                width: 50%;
             }
 
-            &--paragraphs {
 
+            &--paragraphs {
                 p {
+
+                    font-family: -apple-system, BlinkMacSystemFont,
+                    “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
+                    “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+                    sans-serif;
 
                     line-height: 1.5;
                     font-size: calc(1rem + .25vw);
                     font-weight: 300;
 
                 }
-            }
 
-            &--work {
-
-
-              
-                margin: 0;
-                font-weight: 300;
-                text-decoration: none;
-                color: black;
-                font-size: 1.25rem;
-                font-weight: 400;
-
-                &--link {
-                    line-height: 1.2;
-                    color: #aaa;
-                    font-size: .7rem;
-                    font-weight: 100;
-                    margin-top: 3px;
-                    ;
-                }
-            }
-
-
-            &--work:hover {
-                transition: 0.4s ease-in-out;
-
-                color: #aaa;
-
-
-                #link-icon {
-
-                    @mixin atMedium {
-
-                        transition-delay: 1s;
-                        /* delays for 1 second */
-                        display: inline-block;
-                    }
-
-                }
-
-            }
-
-
-
-            @mixin atLarge {
-                float: right;
-                width: 50%;
             }
 
 
@@ -178,24 +91,22 @@
                     margin: 0;
                 }
 
-                &--awards {
-                    margin: 3rem 0 1.5rem;
-                    font-size: .875rem;
-                    color: #aaa;
-                    font-weight: 500;
-
-
-
-                    @mixin atLarge {
-                        margin-top: 40px;
-                        padding-top: 100px;
-                    }
-
-                }
-
-
             }
 
+            &--awards {
+                margin: 3rem 0 1.5rem;
+                font-size: .875rem;
+                color: #aaa;
+                font-weight: 500;
+
+
+
+                @mixin atLarge {
+                    margin-top: 40px;
+                    padding-top: 100px;
+                }
+
+            }
 
             #picofme {
                 padding-top: 30px;
@@ -207,7 +118,6 @@
                 }
 
                 display: block;
-
                 width: calc(100% - 10px);
                 height: auto;
                 max-width: 600px;
@@ -224,7 +134,8 @@
             }
 
         }
+
     }
-
-
 }
+
+
