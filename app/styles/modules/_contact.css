@@ -29,9 +29,9 @@
     &--logo {
         img {
             display: block;
-            width: calc(50% - 10px);
-            max-width: 200px;
+            width: 19.605vh;
             margin: 0 auto;
+            padding-bottom: 50px;
         }
     }
 
@@ -47,10 +47,10 @@
 
             font-size: 1.25rem;
             display: inline;
-           text-align: center;
-            
-           
-            
+            text-align: center;
+
+
+
 
             i {
 
@@ -58,11 +58,7 @@
                 width: 20%;
                 margin-top: 30px;
 
-/*
-                &:hover {
-                    color: #aaa;
-                }
-*/
+
             }
 
 
