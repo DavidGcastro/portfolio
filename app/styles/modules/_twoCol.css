@@ -1,6 +1,9 @@
 .twoCol {
     /*    min-height: 100vh;*/
-    border-bottom: 1px rgb(236, 238, 239) solid;
+    /*    background-color: #FFE9E1;*/
+    background-color: rgb(253, 238, 233);
+
+    /*    border-bottom: 10px rgb(236, 238, 239) solid;*/
     padding: 22vw 1.25rem;
 
     i {
@@ -9,6 +12,8 @@
 
     .work-title {
         margin-bottom: 5px;
+        
+        display: inline-block;
     }
 
     #link-icon {
@@ -69,7 +74,7 @@
                 height: 100%;
                 width: 50%;
                 font-size: 14rem;
-/*                transform: rotate(7deg);*/
+                /*                transform: rotate(7deg);*/
             }
 
         }
@@ -86,9 +91,14 @@
                 &--logo {
                     margin-right: 20px;
                     max-width: 90px;
-                    @mixin atMedium {
-                        margin-right: 80px;
 
+                    @mixin atMedium {
+                        margin-right: 51px;
+
+                    }
+
+                    @mixin atLarge {
+                        margin-right: 80px;
                     }
 
                 }
@@ -109,6 +119,8 @@
 
             &--work {
 
+
+              
                 margin: 0;
                 font-weight: 300;
                 text-decoration: none;
@@ -128,6 +140,7 @@
 
 
             &--work:hover {
+                transition: 0.4s ease-in-out;
 
                 color: #aaa;
 
@@ -136,8 +149,11 @@
 
                     @mixin atMedium {
 
+                        transition-delay: 1s;
+                        /* delays for 1 second */
                         display: inline-block;
                     }
+
                 }
 
             }
