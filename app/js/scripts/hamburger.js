@@ -1,6 +1,17 @@
-$('.hamburger').on('click', function () {
-    
+$('.hamburger').on('click', function (e) {
+
+
     $(this).toggleClass("clicked");
-      $(this).toggleClass("noHover");
+    $('nav').toggleClass("open");
+    $(".wrapper").toggleClass("wrapperOpen");
+    //change to wrapper for push over nav
+        e.preventDefault();
+
 
 })
+
+
+$("nav li a").on("click", function () {
+    $(".hamburger").trigger("click");
+
+});

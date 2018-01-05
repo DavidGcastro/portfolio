@@ -1,17 +1,27 @@
 .hamburger {
-    position: absolute;
+    z-index: 555000;
+    cursor: pointer;
+
+    position: fixed;
     top: 20px;
     display: inline-block;
     right: 20px;
-    /*    transition: all 2s linear;*/
-    &:hover {
-        .bar:nth-of-type(2) {
-            width: 30px;
+    transition: all 2s linear;
+
+    @mixin atLarge {
+
+        &:hover {
+            .bar:nth-of-type(2) {
+                width: 30px;
+            }
+
+            .bar:nth-of-type(3) {
+                width: 10px;
+            }
+
         }
 
-        .bar:nth-of-type(3) {
-            width: 10px;
-        }
+
 
     }
 
@@ -19,18 +29,14 @@
     .bar {
         display: block;
         background: white;
-        width: 40px;
         height: 3px;
         margin-bottom: 10px;
         transition: all .2s linear;
+        width: 40px;
+
 
 
     }
-
-
-
-
-
 
 }
 
@@ -39,30 +45,28 @@
 
 
     .hamburger {
+
         margin: 0;
 
-        &:hover {
-            .bar {
-                background: red;
-            }
-        }
+
     }
 
     .hamburger--top {
         transform: translateY(9px)rotate(-45deg);
         margin-bottom: 0;
-
+        background-color: black;
     }
 
     .hamburger--middle {
 
-
+        background-color: black;
         transform: translateY(7px) rotate(45deg);
 
     }
 
     .hamburger--bottom {
         opacity: 0;
+
 
 
     }

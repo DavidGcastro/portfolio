@@ -15,3 +15,8 @@ a {
 a:hover {
     color: #aaa;
 }
+
+.wrapperOpen {
+   position: fixed;
+}
+
