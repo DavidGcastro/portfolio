@@ -1,5 +1,7 @@
 .mainHeader {
-    /*        min-height: 100vh;*/
+    
+    position: relative;
+ 
     .underline {
         padding-bottom: 1.5px;
         border-bottom: 1px white solid;
@@ -33,7 +35,6 @@
 
         &--small {
 
-/*            color: #aaa;*/
             color: #ffda00;
             margin: 0;
             letter-spacing: 2px;

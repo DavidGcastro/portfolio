@@ -17,15 +17,6 @@
     }
 
 
-    @mixin atSmall {
-        /*            padding: 20vw 2.5rem;*/
-    }
-
-    @mixin atLarge {
-        /*            padding: 13vw 7.5vh; */
-    }
-
-
     &--logo {
         img {
             display: block;
