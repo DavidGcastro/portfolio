@@ -1,36 +1,112 @@
 .mainHeader {
-    
+
     position: relative;
- 
+    min-height: 100vh;
+    display: block;
+
+    .position-me {
+
+
+        position: fixed;
+        padding: 20px;
+        transition: all 2s linear;
+        position: absolute;
+        @mixin atMedium {
+
+
+            padding: 0;
+            transform: translateX(-100%);
+            position: fixed;
+            top: 40vh;
+
+        }
+
+
+
+    }
+
+    .rotate-me {
+
+        @mixin atMedium {
+            display: block;
+            transform: rotate(-90deg);
+            transform-origin: right top;
+            text-align: right;
+
+        }
+
+    }
+
+    .smallText {
+
+
+        font-size: .5rem;
+        padding-right: 4px;
+        text-transform: uppercase;
+        color: #aaa;
+
+
+        @mixin atMedium {
+            font-size: .7vw;
+            display: inline;
+
+        }
+
+
+    }
+
+    .largeText {
+
+
+        text-transform: uppercase;
+         font-family: "franklin-gothic-urw-comp";
+
+
+
+        @mixin atMedium {
+            font-size: 1.2vw;
+            display: inline;
+
+            font-weight: bold;
+            float: none;
+
+        }
+
+
+
+    }
+
     .underline {
         padding-bottom: 1.5px;
-        border-bottom: 1px white solid;
+        border-bottom: 1px black solid;
         cursor: pointer;
     }
 
 
 
     &--content {
-        background-color: #232323;
-        min-height: 70vh;
-        padding: 35vw 1.25rem;
+
+
+        width: 330px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+/*          font-family: "franklin-gothic-urw-comp";*/
+        font-weight: 00;
 
         font-family: 'Poppins', sans-serif;
-
-        @mixin atLarge {
-            min-height: 80vh;
-        }
-
-
+        background-color: white;
+        position: absolute;
 
         @mixin atSmall {
-            padding: 20vw 2.5rem;
-
+            width: 400px;
         }
 
-        @mixin atLarge {
-            padding: 10vw 8rem;
+        @mixin atMedium {
+            width: 60vw;
         }
+
+
 
 
         &--small {
@@ -39,24 +115,24 @@
             margin: 0;
             letter-spacing: 2px;
             text-transform: uppercase;
-            font-size: .75rem;
+            font-size: 2vh;
 
         }
 
         h1 {
-            color: white;
+            color: black;
             line-height: 1.5;
-            font-size: 1.85rem;
+            font-size: 3.3vh;
 
             @mixin atSmall {
-                font-size: 2.25rem;
+                font-size: 3vh;
             }
 
             @mixin atMedium {
-                font-size: 3rem;
+                font-size: 3vh;
             }
             @mixin atLarge {
-                font-size: 3.2vw;
+                font-size: 4vw;
             }
         }
 
@@ -71,21 +147,36 @@
 
 .container-arrow {
 
-    margin-top: -20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    display: inline-block;
-    text-align: center;
-    line-height: 40px;
-    position: absolute;
-    bottom: 15%;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    padding-bottom: 15px;
-    cursor: pointer;
-    font-size: 12px;
+    display: none;
+
+    @mixin atMedium {
+        margin-top: -20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: black;
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        bottom: 0;
+        padding-bottom: 15px;
+        cursor: pointer;
+        font-size: 4px;
+
+    }
+
+    i {
+        font-size: 3vw;
+
+
+
+
+
+
+    }
 }
 
 .container-arrow:hover,

@@ -16,7 +16,21 @@ a:hover {
     color: #aaa;
 }
 
+/*
 .wrapperOpen {
-   position: fixed;
+}
+*/
+
+.wrapper{
+/*    transform: translateX(0);*/
+    transition: transform .6s ease;
 }
 
+
+.wrapperOpen{
+    
+    transform: translateX(-25vh);
+        position: fixed;
+
+    
+}

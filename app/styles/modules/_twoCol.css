@@ -1,4 +1,6 @@
 .twoCol {
+    font-family: "franklin-gothic-urw-comp";
+
     background-color: rgb(253, 238, 233);
     padding: 22vw 1.25rem;
 
@@ -29,7 +31,7 @@
         /*        LEFT SIDE*/
         &--left {
 
-            font-family: 'Poppins', sans-serif;
+/*            font-family: 'Poppins', sans-serif;*/
             display: inline-block;
             font-size: 2.25rem;
             line-height: 1.33;
@@ -137,5 +139,3 @@
 
     }
 }
-
-

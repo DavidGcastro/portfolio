@@ -11,7 +11,8 @@ $('.hamburger').on('click', function (e) {
 })
 
 
-$("nav li a").on("click", function () {
+$("nav li a").on("click", function (e) {
+    e.preventDefault();
     $(".hamburger").trigger("click");
 
 });
