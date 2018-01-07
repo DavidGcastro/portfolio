@@ -1,5 +1,4 @@
 nav {
-/*  font-family: "franklin-gothic-urw-comp";*/
 
     position: fixed;
     top: 0;
@@ -11,21 +10,31 @@ nav {
     transform: translateX(100%);
     transition: transform .6s ease;
 
-    /*    display: none;*/
     ul {
         bottom: 50vh;
-        margin: 0;
-        padding: 20px;
+        padding: 0;
+
+        @mixin atMedium {
+            padding: 20px;
+            margin: 0;
+        }
+
     }
     li {
         list-style: none;
-        margin: 0;
-
         color: white;
-        padding: 10px 20px;
         cursor: pointer;
         color: black;
         text-align: none;
+        padding-left: 20px;
+        padding-bottom: 20px;
+
+        @mixin atMedium {
+            padding: 10px 20px;
+            margin: 0;
+            
+
+        }
 
         a {
             color: white;
@@ -36,16 +45,3 @@ nav {
 
 
 }
-
-/*
-.open { 
-    transform: translateX(0%);
-
-
-    @mixin atMedium {
-        transform: translateX(50%);
-
-    }
-
-}
-*/

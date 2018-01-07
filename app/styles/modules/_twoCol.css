@@ -1,5 +1,4 @@
 .twoCol {
-    font-family: "franklin-gothic-urw-comp";
 
     background-color: rgb(253, 238, 233);
     padding: 22vw 1.25rem;
@@ -31,7 +30,8 @@
         /*        LEFT SIDE*/
         &--left {
 
-/*            font-family: 'Poppins', sans-serif;*/
+            font-family: "franklin-gothic-urw-comp";
+
             display: inline-block;
             font-size: 2.25rem;
             line-height: 1.33;
@@ -39,13 +39,11 @@
             @mixin atMedium {
                 margin: 0 auto;
                 width: calc(100% - 10px);
-
                 max-width: 600px;
             }
 
             @mixin atLarge {
                 align-items: center;
-
                 height: 100%;
                 width: 50%;
                 font-size: 14rem;
@@ -71,7 +69,6 @@
                     “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
                     “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
                     sans-serif;
-
                     line-height: 1.5;
                     font-size: calc(1rem + .25vw);
                     font-weight: 300;

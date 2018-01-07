@@ -21,16 +21,24 @@ a:hover {
 }
 */
 
-.wrapper{
-/*    transform: translateX(0);*/
+.wrapper {
+    /*    transform: translateX(0);*/
     transition: transform .6s ease;
 }
 
 
-.wrapperOpen{
-    
-    transform: translateX(-25vh);
-        position: fixed;
+.wrapperOpen {
+    position: fixed;
+    transform: translateX(-75vw);
 
-    
+
+    @mixin atMedium {
+        transform: translateX(-25vw);
+
+    }
+
+
+
+
+
 }
