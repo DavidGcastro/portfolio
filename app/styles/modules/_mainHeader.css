@@ -41,13 +41,13 @@
 
 
         font-size: .5rem;
-        padding-right: 4px;
+        padding-right: 5px;
         text-transform: uppercase;
         color: #aaa;
 
 
         @mixin atMedium {
-            font-size: .7vw;
+            font-size: .7rem;
             display: inline;
 
         }
@@ -63,7 +63,7 @@
 
 
         @mixin atMedium {
-            font-size: 1.2vw;
+            font-size: 1rem;
             display: inline;
 
             font-weight: bold;
@@ -103,7 +103,7 @@
         }
 
         @mixin atMedium {
-            width: 600px;
+            width: 650px;
         }
         
         @mixin atLarge{
@@ -128,15 +128,19 @@
             line-height: 1.5;
             margin: 0;
             font-weight: 700;
-            font-size: 7vh;
+            font-size: 5vh;
 
             @mixin atSmall {
-                font-size: 8vh;
+                font-size: 6vh;
 
+            }
+            
+            @mixin atMedium{
+                font-size: 7vh;
             }
            
             @mixin atLarge{
-                font-size: 10vh;
+                font-size: 7vh;
             }
 
         }
@@ -154,7 +158,7 @@
 
     display: none;
 
-    @mixin atMedium {
+    @mixin atSmall {
         margin-top: -20px;
         font-weight: 300;
         text-transform: uppercase;
