@@ -3,6 +3,9 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+
 
 
 }
@@ -12,33 +15,26 @@ a {
 }
 
 
-a:hover {
-    color: #aaa;
-}
-
-/*
-.wrapperOpen {
-}
-*/
-
 .wrapper {
-    /*    transform: translateX(0);*/
     transition: transform .6s ease;
+/*    transform: translateX(0);*/
+
 }
 
 
 .wrapperOpen {
-    position: fixed;
+    overflow-y: hidden;
+
+    height: 100%;
+    width: 100%;
     transform: translateX(-75vw);
+
 
 
     @mixin atMedium {
         transform: translateX(-25vw);
 
+
     }
-
-
-
-
 
 }

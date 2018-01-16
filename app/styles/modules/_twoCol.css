@@ -1,4 +1,8 @@
 .twoCol {
+    
+    a:hover {
+        color: grey;
+    }
 
     background-color: rgb(253, 238, 233);
     padding: 22vw 1.25rem;

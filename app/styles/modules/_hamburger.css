@@ -1,5 +1,5 @@
 .hamburger {
-    z-index: 555000;
+    z-index: 5;
     cursor: pointer;
     position: fixed;
     top: 20px;
@@ -56,6 +56,8 @@
 .clicked {
 
 
+
+
     .hamburger {
 
         margin: 0;
@@ -66,18 +68,24 @@
     .hamburger--top {
         transform: translateY(9px)rotate(-45deg);
         margin-bottom: 0;
-        background-color: black;
+        background-color: white;
+
+
     }
 
     .hamburger--middle {
 
-        background-color: black;
+
         transform: translateY(7px) rotate(45deg);
+        background-color: white;
+
+
 
     }
 
     .hamburger--bottom {
         opacity: 0;
+
 
 
 

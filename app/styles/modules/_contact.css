@@ -20,9 +20,9 @@
     &--logo {
         img {
             display: block;
-            width: 19.605vh;
+            width: 25vh;
             margin: 0 auto;
-            padding-bottom: 50px;
+/*            padding-bottom: 50px;*/
         }
     }
 
