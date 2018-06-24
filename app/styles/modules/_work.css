@@ -1,112 +1,87 @@
 .work {
-
-
-    &--link {
-        color: black;
-        text-decoration: none;
-
-        @mixin atLarge {
-            display: inline-block;
-
-        }
-
-
-
-        &:hover {
-            .work--url {
-                opacity: 1;
-            }
-        }
-    }
-
-
-
-
-    @mixin atMedium {
-        margin: 30px 0;
-    }
-
+  &--link {
+    color: black;
+    text-decoration: none;
 
     @mixin atLarge {
-        margin: 0 0;
-
-
-
+      display: inline-block;
     }
 
+    &:hover {
+      .work--url {
+        opacity: 1;
+      }
+    }
+  }
 
-    &--name {
-        font-size: 1.25rem;
-        margin-top: 10px;
-        margin-bottom: 0px;
+  @mixin atMedium {
+    margin: 30px 0;
+  }
+
+  @mixin atLarge {
+    margin: 0 0;
+  }
+
+  &--name {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  &--role {
+    font-size: 12px;
+    margin-bottom: 0px;
+    color: #aaa;
+
+    @mixin atMedium {
+      margin: 0px;
     }
 
-    &--role {
-        font-size: 12px;
-        margin-bottom: 0px;
-        color: #aaa;
+    @mixin atLarge {
+      margin: 0px;
+    }
+  }
 
+  &--url {
+    font-size: 10px;
+    margin: 0;
+    color: #aaa;
+    display: block;
+    font-weight: 300;
 
-        @mixin atMedium {
-            margin: 0px;
-        }
-
-        @mixin atLarge {
-            margin: 0px;
-        }
-
+    @mixin atMedium {
+      margin-left: 5px;
+      display: inline-block;
+      color: black;
+      font-weight: 700;
+      font-size: 12px;
     }
 
-    &--url {
-        font-size: 10px;
-        margin: 0;
-        color: #aaa;
-        display: block;
-        font-weight: 300;
+    @mixin atLarge {
+      opacity: 0;
+      transition: opacity 0.4s linear;
+    }
+  }
 
-        @mixin atMedium {
-            margin-left: 5px;
-            display: inline-block;
-            color: black;
-            font-weight: 700;
-            font-size: 12px;
-        }
+  &--awards {
+    color: #aaa;
+    margin-top: 80px;
+    margin-bottom: 24px;
 
-        @mixin atLarge {
-            opacity: 0;
-            transition: opacity .4s linear;
-
-        }
+    &--title {
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      margin-bottom: 30px;
     }
 
-    &--awards {
-        color: #aaa;
-        margin-top: 80px;
-        margin-bottom: 24px;
+    &--logo {
+      width: 79px;
+      margin-top: 30px;
+      margin-right: 30px;
 
-
-        &--title {
-            font-size: 14px;
-            letter-spacing: .5px;
-            margin-bottom: 30px;
-        }
-
-
-        &--logo {
-
-            width: 79px;
-            margin-right: 30px;
-
-            @mixin atSmall {
-               width: 130px;
-
-            }
-
-        }
-
+      @mixin atSmall {
+        width: 130px;
+      }
     }
-
-
-
-
+  }
 }
