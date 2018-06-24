@@ -1,233 +1,191 @@
 .mainHeader {
+  position: relative;
+  min-height: 100vh;
+  display: block;
 
-    position: relative;
-    min-height: 100vh;
+  .position-me {
+    transition: all 2s linear;
+    position: absolute;
+
+    @mixin atMedium {
+      padding: 0;
+
+      transform: translateX(-100%);
+      position: fixed;
+      top: 20vh;
+    }
+  }
+
+  .rotate-me {
+    padding-left: 20px;
+
+    @mixin atMedium {
+      padding-top: 10px;
+      display: block;
+      transform: rotate(-90deg);
+      transform-origin: right top;
+      text-align: right;
+    }
+  }
+
+  .smallText {
+    font-size: 0.5rem;
+    padding-right: 5px;
+    text-transform: uppercase;
+    color: #aaa;
+
+    @mixin atMedium {
+      font-size: 1rem;
+    }
+  }
+
+  .largeText {
+    float: left;
+    padding-right: 5px;
+    text-transform: uppercase;
+
+    @mixin atMedium {
+      font-size: 1.5rem;
+      display: inline;
+      float: none;
+      font-weight: bold;
+    }
+  }
+
+  .underline {
+    padding-bottom: 1.5px;
+    border-bottom: 1px black solid;
+    cursor: pointer;
+  }
+
+  &--content {
     display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    /*        margin: 0 auto;*/
+    @mixin atSmall {
+      text-align: left;
 
-    .position-me {
-
-
-        transition: all 2s linear;
-        position: absolute;
-
-        @mixin atMedium {
-            padding: 0;
-
-            transform: translateX(-100%);
-            position: fixed;
-            top: 20vh;
-
-        }
-
-
-
+      width: 73vw;
     }
 
-    .rotate-me {
-        padding-left: 20px;
-
-        @mixin atMedium {
-            padding-top: 10px;
-            display: block;
-            transform: rotate(-90deg);
-            transform-origin: right top;
-            text-align: right;
-
-        }
-
+    @mixin atMedium {
+      width: 650px;
     }
 
-    .smallText {
-        font-size: .5rem;
-        padding-right: 5px;
-        text-transform: uppercase;
-        color: #aaa;
-
-
-        @mixin atMedium {
-            font-size: 1rem;
-
-        }
-
-
+    @mixin atLarge {
+      width: inherit;
     }
 
-    .largeText {
+    &--small {
+      text-align: left;
+      padding-left: 20px;
+      color: #ffda00;
+      margin: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 2vh;
 
-        float: left;
-        padding-right: 5px;
-        text-transform: uppercase;
+      @mixin atSmall {
+      }
 
-
-
-        @mixin atMedium {
-            font-size: 1.5rem;
-            display: inline;
-            float: none;
-            font-weight: bold;
-
-        }
-
-
-
+      @mixin atMedium {
+        padding-left: 0;
+      }
     }
 
-    .underline {
-        padding-bottom: 1.5px;
-        border-bottom: 1px black solid;
-        cursor: pointer;
+    h1 {
+      color: black;
+      line-height: 1.5;
+      margin: 0;
+      font-weight: 700;
+      font-size: 2rem;
+
+      @mixin atSmall {
+        font-size: 2.2rem;
+      }
+
+      @mixin atMedium {
+        font-size: 7vh;
+      }
+
+      @mixin atLarge {
+        font-size: 7vh;
+      }
     }
-
-
-
-    &--content {
-
-
-        display: block;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-weight: 700;
-        font-family: 'Poppins', sans-serif;
-        background-color: white;
-        position: absolute;
-        text-align: center;
-        width: 300px;
-        /*        margin: 0 auto;*/
-        @mixin atSmall {
-            text-align: left;
-            
-            width: 73vw;
-
-        }
-
-        @mixin atMedium {
-            width: 650px;
-        }
-
-        @mixin atLarge {
-            width: inherit;
-        }
-
-
-
-
-        &--small {
-            text-align: left;
-            padding-left: 20px;
-            color: #ffda00;
-            margin: 0;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 2vh;
-
-            @mixin atSmall {}
-
-            @mixin atMedium {
-                padding-left: 0;
-            }
-
-        }
-
-        h1 {
-            color: black;
-            line-height: 1.5;
-            margin: 0;
-            font-weight: 700;
-            font-size: 2rem;
-
-            @mixin atSmall {
-                font-size: 2.2rem;
-
-            }
-
-            @mixin atMedium {
-                font-size: 7vh;
-            }
-
-            @mixin atLarge {
-                font-size: 7vh;
-            }
-
-        }
-
-    }
-
+  }
 }
-
-
 
 /* Arrow Button 
 	-----------------------------------*/
 
 .container-arrow {
+  display: none;
 
-    display: none;
+  @mixin atSmall {
+    margin-top: -20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 15px;
+    cursor: pointer;
+    font-size: 4px;
+  }
 
-    @mixin atSmall {
-        margin-top: -20px;
-        font-weight: 300;
-        text-transform: uppercase;
-        color: black;
-        display: inline-block;
-        text-align: center;
-        line-height: 40px;
-        position: absolute;
-        left: 0;
-        z-index: 10;
-        width: 100%;
-        bottom: 0;
-        padding-bottom: 15px;
-        cursor: pointer;
-        font-size: 4px;
+  i {
+    font-size: 3vw;
 
+    &:hover {
+      color: grey;
     }
-
-    i {
-        font-size: 3vw;
-
-
-        &:hover {
-            color: grey;
-        }
-
-
-
-
-
-    }
+  }
 }
 
 .container-arrow:hover,
 .container-arrow:focus {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Arrow Bouncing */
 
 .container-arrow span {
-    display: inline-block;
-    font-size: 80px;
-    animation: 1.2s down infinite alternate;
-    -webkit-animation: 1.2s down infinite alternate;
+  display: inline-block;
+  font-size: 80px;
+  animation: 1.2s down infinite alternate;
+  -webkit-animation: 1.2s down infinite alternate;
 }
 
 /***Animation Arrow down***/
 
 @keyframes down {
-    0% {
-        transform: translateY(0px)
-    }
-    100% {
-        transform: translateY(20px)
-    }
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
 }
 
 @-webkit-keyframes down {
-    0% {
-        -webkit-transform: translateY(0px)
-    }
-    100% {
-        -webkit-transform: translateY(20px)
-    }
+  0% {
+    -webkit-transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+  }
 }
