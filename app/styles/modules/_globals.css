@@ -15,6 +15,19 @@ a {
   transition: transform 0.6s ease;
   /*    transform: translateX(0);*/
 }
+.resume-container {
+  display: inline-block;
+}
+
+.resume-image {
+  width: 100px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.resume-image:hover {
+  transform: scale(1.1) !important;
+}
 
 .wrapperOpen {
   overflow-y: hidden;
