@@ -22,7 +22,7 @@ gulp.task('watch', function() {
   });
 
   watch('./app/index.html', function() {
-    //        console.log('HTML change detected')
+    gulp.start('build');
     browserSync.reload();
   });
 
