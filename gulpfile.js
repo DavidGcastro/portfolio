@@ -42,7 +42,7 @@ gulp.task('cssInject', ['styles'], function() {
 });
 
 //copy html to dist
-gulp.task('build', ['htmlBuild', 'cssBuild', 'jsBuild', 'faviconBuild']);
+gulp.task('build', ['cssBuild', 'jsBuild', 'faviconBuild', 'htmlBuild']);
 
 gulp.task('htmlBuild', function() {
   return gulp.src('./app/index.html').pipe(gulp.dest('./dist/'));
