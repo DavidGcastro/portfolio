@@ -43,7 +43,7 @@ gulp.task('cssInject', ['styles'], function() {
 });
 
 //copy html to dist
-gulp.task('build', ['htmlBuild', 'cssBuild', 'jsBuild']);
+gulp.task('build', ['htmlBuild', 'cssBuild', 'jsBuild', 'faviconBuild']);
 
 gulp.task('htmlBuild', function() {
   return gulp.src('./app/index.html').pipe(gulp.dest('./dist/'));
@@ -55,6 +55,11 @@ gulp.task('cssBuild', function() {
 });
 gulp.task('jsBuild', function() {
   return gulp.src('./app/js/main.js').pipe(gulp.dest('./dist/js/'));
+});
+gulp.task('faviconBuild', function() {
+  return gulp
+    .src('./app/favicons.ico/*.png/')
+    .pipe(gulp.dest('./dist/favicons.ico/'));
 });
 
 //modify and minify CSS
