@@ -43,8 +43,18 @@ gulp.task('cssInject', ['styles'], function() {
 });
 
 //copy html to dist
-gulp.task('copyhtml', function() {
+gulp.task('build', ['htmlBuild', 'cssBuild', 'jsBuild']);
+
+gulp.task('htmlBuild', function() {
   return gulp.src('./app/index.html').pipe(gulp.dest('./dist/'));
+});
+gulp.task('cssBuild', function() {
+  return gulp
+    .src('./app/styles/temp/source.css')
+    .pipe(gulp.dest('./dist/styles/temp/'));
+});
+gulp.task('jsBuild', function() {
+  return gulp.src('./app/js/main.js').pipe(gulp.dest('./dist/js/'));
 });
 
 //modify and minify CSS
@@ -56,14 +66,14 @@ gulp.task('styles', function() {
     nested,
     autoprefixer,
     cssnano,
-    simpleVars
+    simpleVars,
+    imagemin
   ];
 
   return gulp
     .src('./app/styles/source.css')
     .pipe(postcss(postcss_stuff))
     .pipe(gulp.dest('./app/styles/temp/'));
-  //        .pipe(browserSync.stream()); //live reload of compiled css
 });
 
 //make images smaller
