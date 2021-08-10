@@ -9,32 +9,34 @@ var imagemin = require('gulp-imagemin');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var mixins = require('postcss-mixins');
-
+var path = require('path');
+var sourceDir = path.resolve(__dirname + '/../app');
+var root = path.resolve(__dirname + '/../');
 function htmlBuild () {
-    return gulp.src('../app/index.html').pipe(gulp.dest('../dist/'));
+    return gulp.src(sourceDir + '/index.html').pipe(gulp.dest(root + '/dist/'));
 }
 
 function cssBuild () {
     return gulp
-        .src('../app/styles/temp/source.css')
-        .pipe(gulp.dest('../dist/styles/temp/'));
+        .src( sourceDir + '/styles/temp/source.css')
+        .pipe(gulp.dest(root + '/dist/styles/temp/'));
 }
 
 function jsBuild () {
-    return gulp.src('../app/js/main.js').pipe(gulp.dest('../dist/js/'));
+    return gulp.src(sourceDir + '/js/main.js').pipe(gulp.dest(root + '/dist/js/'));
 }
 
 function faviconBuild () {
     return gulp
-        .src('../app/favicons.ico/*')
-        .pipe(gulp.dest('./dist/favicons.ico/'));
+        .src(sourceDir + '/favicons.ico/*')
+        .pipe(gulp.dest(root + '/dist/favicons.ico/'));
 }
 
 function imagemin() {
     return gulp
-        .src('../app/images/*')
+        .src(sourceDir + '/images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('../temp/images'))
+        .pipe(gulp.dest(root + '/temp/images'))
 }
 
 function styles () {
@@ -49,21 +51,21 @@ function styles () {
     ];
 
     return gulp
-        .src('../app/styles/source.css')
+        .src(sourceDir + '/styles/source.css')
         .pipe(postcss(postcss_stuff))
-        .pipe(gulp.dest('../app/styles/temp/'));
+        .pipe(gulp.dest(root + '/styles/temp/'));
 }
 
 function scripts() {
     return gulp
-        .src('../app/js/scripts/*js')
+        .src(sourceDir + '/js/scripts/*js')
         .pipe(concat('main.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('../app/js/'));
+        .pipe(gulp.dest(root + '/js/'));
 }
 
 function injectStyles() {
-    return gulp.src('../app/styles/temp/source.css').pipe(browserSync.stream());
+    return gulp.src(sourceDir + '/styles/temp/source.css').pipe(browserSync.stream());
 }
 
 
