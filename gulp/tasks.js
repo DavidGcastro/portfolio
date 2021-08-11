@@ -28,8 +28,8 @@ function jsBuild () {
 
 function faviconBuild () {
     return gulp
-        .src(sourceDir + '/favicons.ico/*')
-        .pipe(gulp.dest(root + '/dist/favicons.ico/'));
+        .src(sourceDir + '/styles/myFavicons.ico/*')
+        .pipe(gulp.dest(root + '/dist/myFavicons.ico/'));
 }
 
 function imagemin() {
