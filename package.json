@@ -22,7 +22,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
     "install": "^0.13.0",
-    "npm": "^7.20.2",
+    "npm": "^8.11.0",
     "postcss-import": "^14.0.2",
     "postcss-mixins": "^8.1.0",
     "postcss-nested": "^5.0.5",
